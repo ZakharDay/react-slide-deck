@@ -303,7 +303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var prevWheelDelta = _state$prevWheelDelta === undefined ? 1 : _state$prevWheelDelta;
 	
 	      Math.abs(delta) > 0 && this.setState({ prevWheelDelta: delta });
-	      if (Math.abs(delta) / Math.abs(prevWheelDelta) <= 1) return;
+	      if (Math.abs(delta) / Math.abs(prevWheelDelta) <= 0.5) return;
 	
 	      if (status !== STATUS.NORMAL || delta === 0 || this.isCurrentSlideScrolling({ delta: delta })) return;
 	
