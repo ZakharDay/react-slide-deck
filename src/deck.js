@@ -147,7 +147,7 @@ class Deck extends Component {
     const delta = e.deltaY;
     let { status, prevWheelDelta = 1 } = this.state;
     Math.abs(delta) > 0 && this.setState({ prevWheelDelta: delta });
-    if (Math.abs(delta) / Math.abs(prevWheelDelta) <= 0.5) return;
+    if (Math.abs(delta) / Math.abs(prevWheelDelta) <= 1) return;
 
     if (status !== STATUS.NORMAL || delta === 0 || this.isCurrentSlideScrolling({ delta })) return;
 
